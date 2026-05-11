@@ -1,21 +1,26 @@
 #include <iostream>
 using namespace std;
-int main (){
-    int arr[5] = {0};
-    int sumeven = 0;
-    int sumodd = 0;
-    int element;
-    for (int i = 1 ; i<=5 ; i++){
-        cout << "Enter a element" << i << ":";
+
+int main() {
+
+    int arr[5];
+    int evenSum = 0, oddSum = 0;
+
+    cout << "Enter 5 numbers:\n";
+
+    for(int i=0; i<5; i++) {
+
         cin >> arr[i];
-        if (arr[i] % 2 == 0){
-            sumeven +=arr[i];
-        }
-        else {
-            sumodd +=arr[i];
-        }
+
+        if(arr[i] % 2 == 0)
+            evenSum += arr[i];
+
+        else
+            oddSum += arr[i];
     }
-    cout << "Sum of even numbers is:" << sumeven << "\n";
-    cout << "Sum of odd numbers is: " << sumodd << endl;
-return 0;
+
+    cout << "Sum of Even Numbers = " << evenSum << endl;
+    cout << "Sum of Odd Numbers = " << oddSum;
+
+    return 0;
 }

@@ -1,15 +1,21 @@
 #include <iostream>
 using namespace std;
-int main (){
-    int arr[5] = {0};
-    int plus;
-for (int i = 1 ; i<=5 ; i++){
-    cout << "Enter element" << i <<":";
-    cin >> arr[1];
-    if (arr[i] % 3 == 0 && arr[i] % 5 == 0){
-        plus++ ;
+
+int main() {
+
+    int arr[5];
+    int count = 0;
+
+    cout << "Enter 5 numbers:\n";
+
+    for(int i=0; i<5; i++) {
+        cin >> arr[i];
+
+        if(arr[i]%3==0 && arr[i]%5==0)
+            count++;
     }
-}
-cout << plus << " numbers are both divisible by both 3 and 5";
-return 0;
+
+    cout << "Count = " << count;
+
+    return 0;
 }
